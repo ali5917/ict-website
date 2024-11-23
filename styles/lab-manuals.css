@@ -1,0 +1,125 @@
+/* General styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+a {
+    text-decoration: none;
+    color: inherit;
+}
+  
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(66, 66, 66);
+}
+  
+.navbar {
+    width: 100%;
+    height: 15vh;
+    padding: 2em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    border-bottom: solid 2px rgb(37, 37, 37);
+}
+  
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+  
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+  
+.nav-items a:hover {
+    text-decoration: underline;
+}
+  
+  /* Main container styling */
+.main-container {
+    padding: 2em;
+    text-align: center;
+}
+  
+h1 {
+    font-size: 40px;
+    margin-bottom: 1em;
+}
+  
+p {
+    font-size: 18px;
+    margin-bottom: 2em;
+    color: rgb(90, 90, 90);
+}
+  
+.manual-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2em;
+    margin: 5px 80px;
+}
+
+.manual-item {
+    flex: 1 1 300px;
+    max-width: 400px;
+    margin-bottom: 2em;
+    background-color: white;
+    border: solid 1px rgb(200, 200, 200);
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: background-color 0.5s ease, transform 0.2s ease;
+}
+
+.manual-item:hover {
+    transform: scale(1.02);
+}
+  
+.manual-item h3 {
+    font-size: 18px;
+    margin-bottom: 0.5em;
+}
+  
+.manual-item p {
+    font-size: 16px;
+    margin-bottom: 1em;
+    color: rgb(90, 90, 90);
+}
+  
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    width: -webkit-fill-available;
+}
+
+.links a {
+    flex: 1;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.links a:hover {
+    background-color: #111;
+    transform: scale(1.03);
+}
