@@ -20,6 +20,7 @@ a {
   font-family: 'Montserrat';
   font-size: 18px;
   border-bottom: solid 2px rgb(37, 37, 37);
+  background-color: white;
 }
 
 .logo {
@@ -54,11 +55,13 @@ a {
   font-size: 100px;
   font-weight: bold;
   text-align: center;
+  text-shadow: 0 0 20px rgba(37, 37, 37, 0.484);
 }
 
 .tagline {
   font-size: 30px;
   text-align: center;
+  text-shadow: 0 0 20px rgba(37, 37, 37, 0.484);
 }
 
 .hamburger {
@@ -74,6 +77,17 @@ a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all ease-in-out 0.3s;
   background-color: rgb(37, 37, 37);
+}
+
+img {
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  top: 0;  
+  object-fit: cover;
+  opacity: 0.4;
 }
 
 @media (max-width: 880px) {
