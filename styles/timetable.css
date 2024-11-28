@@ -10,6 +10,18 @@
     color: inherit;
   }
   
+
+  img {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+    left: 0;
+    top: 0;  
+    object-fit: cover;
+    opacity: 0.4;
+  }
+
   .navbar {
     width: 100%;
     height: 15vh;
@@ -21,6 +33,7 @@
     font-family: 'Montserrat';
     font-size: 18px;
     border-bottom: solid 2px rgb(37, 37, 37);
+    background-color: white;
   }
   
   .logo {

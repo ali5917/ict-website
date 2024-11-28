@@ -24,6 +24,7 @@ body {
     align-items: center;
     font-size: 18px;
     border-bottom: solid 2px rgb(37, 37, 37);
+    background-color: white;
 }
   
 .logo {
@@ -138,6 +139,18 @@ p {
     transition: all ease-in-out 0.3s;
     background-color: rgb(37, 37, 37);
   }
+
+  
+img {
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  top: 0;  
+  object-fit: cover;
+  opacity: 0.4;
+}
   
   @media (max-width: 880px) {
     .hamburger {

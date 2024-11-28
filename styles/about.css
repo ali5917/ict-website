@@ -20,6 +20,7 @@ a {
   align-items: center;
   font-size: 18px;
   border-bottom: solid 2px rgb(37, 37, 37);
+  background-color: white;
 }
 
 .logo {
@@ -64,6 +65,18 @@ h1 {
   padding: 1em;
   border: solid rgb(37, 37, 37) 2px;
   min-height: 150px;
+  background-color: white;
+}
+
+img {
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  top: 0;  
+  object-fit: cover;
+  opacity: 0.4;
 }
 
 .head {
