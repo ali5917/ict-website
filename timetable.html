@@ -23,7 +23,13 @@
           <a href="assignments.html">Assignments</a><br>
           <a href="quizzes.html">Quizzes</a>      
         </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </div>
+
       <div class="Table">
         <div class="Week1">
           <h3>Week 1</h3>
@@ -128,5 +134,22 @@
           <p>8 AM - 10 : 30 AM</p>
         </div>
       </div>
+
+      <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navItems = document.querySelector('.nav-items');
+    
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          navItems.classList.toggle("active");
+        })
+    
+        document.querySelectorAll(".nav-items a").forEach(n => 
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navItems.classList.remove("active");
+        })) 
+      </script>
+      
 </body>
 </html>

@@ -123,3 +123,57 @@ p {
     background-color: #111;
     transform: scale(1.03);
 }
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 3px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all ease-in-out 0.3s;
+    background-color: rgb(37, 37, 37);
+  }
+  
+  @media (max-width: 880px) {
+    .hamburger {
+      display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    .nav-items {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      gap: 1em;
+      height: 90vh;
+      width: 100%;
+      text-align: center;
+      transition: all ease 0.3s;
+      background-color: rgb(37, 37, 37);
+      color: white;
+    }
+  
+    .nav-items a {
+      font-size: 15px;
+    }
+  
+    .nav-items.active {
+      left: 0;
+    }
+  }
+  
