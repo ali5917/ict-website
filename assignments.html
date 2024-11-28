@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CL1000x - Fall'24 Assignments</title>
+  <link rel="stylesheet" href="./styles/assignments.css">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html" class="logo">CL1000x</a><br>
+    <div class="nav-items">
+      <a href="about.html">About</a><br>
+      <a href="timetable.html">Timetable</a><br>
+      <a href="lab-manuals.html">Labs</a><br>
+      <a href="assignments.html" style="font-weight: 600;">Assignments</a><br>
+      <a href="countdown.html">Countdown</a><br>
+      <a href="contributors.html">Contributors</a>
+    </div>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+  
+  <div class="main-container">
+    <h1>Fall'24 Assignments</h1>
+    <p>Browse and download lab assignments for the ICT course </p>
+
+    <div class="assignment-list">
+      <!-- Assignment 01 -->
+      <div class="assignment-item">
+        <div class="description">
+          <h3>Assignment 1</h3>
+          <p>Test your understanding of MS Word, MS Excel, MS PowerPoint, MS Access, and SQL.</p>
+        </div>
+        <div class="links">
+          <a href="./manual-viewer/assignment_1.html">View</a>
+        </div>
+      </div>
+
+      <!-- Assignment -->
+      <div class="assignment-item">
+        <div class="description">
+          <h3>Assignment 2</h3>
+          <p>Test your understanding of HTML, CSS, JS, Latex, and Cisco Packet Tracer.</p>
+        </div>
+        <div class="links">
+          <a href="./manual-viewer/assignment_2.html">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navItems = document.querySelector('.nav-items');
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navItems.classList.toggle("active");
+    })
+
+    document.querySelectorAll(".nav-items a").forEach(n => 
+    n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navItems.classList.remove("active");
+    })) 
+  </script>
+
+</body>
+</html>
