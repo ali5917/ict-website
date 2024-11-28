@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CL1000x - Home</title>
+  <link rel="stylesheet" href="./styles/countdown.css">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html" class="logo">CL1000x</a><br>
+    <div class="nav-items">
+      <a href="about.html">About</a><br>
+      <a href="timetable.html">Timetable</a><br>
+      <a href="lab-manuals.html">Labs</a><br>
+      <a href="assignments.html">Assignments</a><br>
+      <a href="quizzes.html">Quizzes</a>      
+      <a href="countdown.html">Countdown</a>      
+      <a href="contributors.html">Contributors</a><br>
+    </div>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+  <div class="main-container">
+    <div class="countdown-container">
+        <div class="date-head">ICT Final Exam Starts</div>
+        <div class="countdown">
+          <div class="countdown-box">
+            <div class="countdown-number" id="days">--</div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-number" id="hours">--</div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-number" id="minutes">--</div>
+            <div class="countdown-label">Minutes</div>
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-number" id="seconds">--</div>
+            <div class="countdown-label">Seconds</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navItems = document.querySelector('.nav-items');
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navItems.classList.toggle("active");
+    })
+
+    document.querySelectorAll(".nav-items a").forEach(n => 
+    n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navItems.classList.remove("active");
+    })) 
+
+    // Set the exam date
+    var examDate = new Date("December 13, 2024 08:30:00").getTime();
+
+    // Update the countdown every second
+    var countdownFunction = setInterval(function() {
+    var now = new Date().getTime();
+    var timeDifference = examDate - now;
+
+    // Calculate days, hours, minutes, and seconds
+    var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    // Display the result in the respective countdown elements
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    // If the countdown is over, stop the timer and display "Exam time!"
+    if (timeDifference < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("days").innerHTML = "0";
+        document.getElementById("hours").innerHTML = "0";
+        document.getElementById("minutes").innerHTML = "0";
+        document.getElementById("seconds").innerHTML = "0";
+        }
+    }, 1000);
+  
+  </script>
+
+</body>
+</html>
