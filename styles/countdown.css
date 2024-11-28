@@ -134,12 +134,3 @@
       left: 0;
     }
   }
-  
-  @media (max-width: 768px) {
-    .head {
-      font-size: 60px;
-    }
-    .tagline {
-      font-size: 15px;
-    }
-}
