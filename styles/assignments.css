@@ -188,5 +188,8 @@ img {
     .nav-items.active {
       left: 0;
     }
+    .assignment-list {
+      margin: 5px 0px;
+    }
   }
   
