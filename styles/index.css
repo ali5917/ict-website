@@ -136,3 +136,38 @@ img {
     font-size: 15px;
   }
 }
+
+
+
+
+
+.main-cursor {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  transition: all ease 0.2s;
+  pointer-events: none;
+  transform-origin: center center;
+  z-index: 1000;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.grow-small, .grow-big, .grow-mid {
+  transform: scale(1.8);
+  background-color: white;
+  border: none;
+  mix-blend-mode: difference;
+}
+
+.grow-big {
+  transform: scale(5);
+}
+
+.grow-mid {
+  transform: scale(2.5);
+}
