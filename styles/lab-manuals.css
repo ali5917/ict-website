@@ -188,5 +188,7 @@ p {
     .nav-items.active {
       left: 0;
     }
+    .manual-list {
+      margin: 5px 0px;
+    }
   }
-  
